@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Rotas from './Components/Rotas';
 import './App.css';
+import Rotas from './Components/Rotas';
 
 class App extends React.Component {
   render() {
