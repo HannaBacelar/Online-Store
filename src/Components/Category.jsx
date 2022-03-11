@@ -1,42 +1,19 @@
-import React, { Component } from 'react';
-import { getCategories } from '../services/api';
+/* import PropTypes from 'prop-types';
+import { Component } from 'react';
 
 class Category extends Component {
-  constructor() {
-    super();
-    this.state = {
-      categories: [],
-    };
-  }
-
-  componentDidMount() {
-    this.fetchCategories();
-  }
-
-  fetchCategories = async () => {
-    const categories = await getCategories();
-    this.setState({ categories });
-  }
-
   render() {
-    const { categories } = this.state;
+    const { categories } = this.props;
     return (
-      <div>
-        <h5>
-          Lista de Categorias
-        </h5>
-        <div>
-          {categories.map(({ id, name }) => (
-            <button type="button" key={ id } data-testid="category">
-              { name }
-            </button>
-          ))}
-        </div>
-      </div>
+
     );
   }
 }
 
+Category.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object),
+}.isRequired;
+
 export default Category;
 
-// Requisito 4: Desenvolvido por João Victor e Renan Aizawa.
+// Requisito 4: Desenvolvido por João Victor e Renan Aizawa. */
