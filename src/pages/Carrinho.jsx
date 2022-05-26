@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
+import ProductCart from '../Components/ProductCart';
 
 class Carrinho extends React.Component {
   constructor() {
     super();
     this.state = {
       cartItems: [],
-      quantidade: 1,
     };
   }
 
@@ -25,84 +25,17 @@ class Carrinho extends React.Component {
     });
   }
 
-  // diminiQuantidade = () => {
-  //   const { id, lidaComDiminuicao } = this.props;
-  //   const { quantidade } = this.state;
-  //   if (quantidade > 1) {
-  //     this.setState({
-  //       quantidade: quantidade - 1 }, lidaComDiminuicao(id));
-  //   }
-  // }
-
-  // aumentaQuantidade = () => {
-  //   const { id, lidaComAumento } = this.props;
-  //   const { quantidade } = this.state;
-  //   if (quantidade > 1) {
-  //     this.setState({
-  //       quantidade: quantidade + 1 }, lidaComAumento(id));
-  //   }
-  // }
-
-  diminiQuantidade = () => {
-    const { quantidade } = this.state;
-    if (quantidade > 0) {
-      this.setState({
-        quantidade: quantidade - 1 });
-    }
-  }
-
-  aumentaQuantidade = () => {
-    const { quantidade } = this.state;
-    if (quantidade >= 0) {
-      this.setState({
-        quantidade: quantidade + 1 });
-    }
-  }
-
   render() {
-    const { cartItems, quantidade } = this.state;
-    const { price } = this.props;
+    const { cartItems } = this.state;
     return (
       <>
         {
           cartItems.length <= 0
             ? <p data-testid="shopping-cart-empty-message">Seu carrinho está vazio</p>
             : cartItems.map((item, index) => (
-              <div key={ index }>
-                <button
-                  type="button"
-                >
-                  XXXX
-                </button>
-
-                <p data-testid="shopping-cart-product-name">
-                  { item }
-                </p>
-                <button
-                  type="button"
-                  data-testid="product-decrease-quantity"
-                  onClick={ (event) => this.diminiQuantidade(event) }
-                >
-                  -
-                </button>
-                <input
-                  type="text"
-                  name="button"
-                  id="button"
-                  value={ quantidade }
-                />
-
-                <button
-                  type="button"
-                  data-testid="product-increase-quantity"
-                  onClick={ (event) => this.aumentaQuantidade(event) }
-                >
-                  +
-                </button>
-                <span>
-                  {`Valor Total ${price}`}
-                </span>
-              </div>
+              <ProductCart
+                key={ index }
+              />
             ))
         }
 
@@ -129,13 +62,10 @@ class Carrinho extends React.Component {
   }
 }
 
-Carrinho.propTypes = {
-  // quantidade: PropTypes.number.isRequired,
+/* Carrinho.propTypes = {
   price: PropTypes.number.isRequired,
-  // id: PropTypes.number.isRequired,
-  // lidaComAumento: PropTypes.func.isRequired,
-  // lidaComDiminuição: PropTypes.func.isRequired,
-};
+// id: PropTypes.number.isRequired,
+}; */
 
 export default Carrinho;
 // Hanna Bacelar
