@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardList from '../Components/CardList';
-import { getCategories,
-  getProductsFromQuery,
-  getProductsFromCategoryId } from '../services/api';
+import { getCategories, getProductsFromCategoryId, getProductsFromQuery } from '../services/api';
 
 class Home extends React.Component {
   constructor() {
