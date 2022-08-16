@@ -6,7 +6,8 @@
 # 🚦 Habilidades ultilizadas 
 - React.js
 - CSS
-- HTML 
+- HTML
+- Metodologias Ágeis
 
 # Contextualizando
 Neste projeto foi desenvolvido  uma aplicação em React de um site de compras, podendo adiconar produtos ao carrinho, somar, excluir, avaliar, pesquisar por categorias, um site completo para quem gosta de comprar Online.
